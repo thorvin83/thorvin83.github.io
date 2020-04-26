@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Gllacy Shop</title>
 </head>
 <body>
@@ -13,17 +15,17 @@
                 <img src="img/main-logo.svg" width="154" height="64" alt="Логотип Gllacy Shop">
             </a>
             <ul class="main-menu">
-                <li><a>Каталог</a>
-                    <ul class="catalog">
-                        <li class="catalog-item new-items"><a href="#">Новинки</a></li>
-                        <li class="catalog-item"><a href="catalog.html">Сливочное</a></li>
-                        <li class="catalog-item"><a href="#">Щербеты</a></li>
-                        <li class="catalog-item"><a href="#">Фруктовый лёд</a></li>
-                        <li class="catalog-item"><a href="#">Мелорин</a></li>
+                <li class="main-menu-item"><a><span>Каталог</span></a>
+                    <ul class="sub-menu">
+                        <li class="sub-menu-item new-items"><a href="#">Новинки</a></li>
+                        <li class="sub-menu-item"><a href="catalog.html">Сливочное</a></li>
+                        <li class="sub-menu-item"><a href="#">Щербеты</a></li>
+                        <li class="sub-menu-item"><a href="#">Фруктовый лёд</a></li>
+                        <li class="sub-menu-item"><a href="#">Мелорин</a></li>
                     </ul>
                 </li>
-                <li><a href="delivery-payment.html">Доставка и оплата</a></li>
-                <li><a href="about-us.html">О Компании</a></li>
+                <li class="main-menu-item"><a href="delivery-payment.html"><span>Доставка и оплата</span></a></li>
+                <li class="main-menu-item"><a href="about-us.html"><span>О Компании</span></a></li>
             </ul>
             <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
                 <p>
@@ -153,7 +155,7 @@
                 <br> <b>8 812 450-25-25</b> 
                 <br> (с 10 до 20 ежедневно)      
             </p>
-            <a href="feedback.html" class="feedback button">Форма обратной связи</a>
+            <a class="feedback button" href="feedback.html">Форма обратной связи</a>
         </section>
     </main>
     <footer class="main-footer">
@@ -170,7 +172,7 @@
             <li><a href="#" class="info-link">Экологические стандарты</a></li>
         </ul>
         <p class="footer-copyright">
-            <img src="img/logo-htmlacademy-small.svg" alt="Логотип HTML Academy" class="copyright-logo">          
+            <img src="img/logo-htmlacademy-small.svg" width="108" height="39" alt="Логотип HTML Academy" class="copyright-logo">          
             <br> Сделано в <a href="https://htmlacademy.ru" class="copyright-link">HTML Academy</a> © 2017
         </p>
     </footer>
