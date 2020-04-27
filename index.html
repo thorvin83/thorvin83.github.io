@@ -15,7 +15,7 @@
                 <img src="img/main-logo.svg" width="154" height="64" alt="Логотип Gllacy Shop">
             </a>
             <ul class="main-menu">
-                <li class="main-menu-item"><a><span>Каталог</span></a>
+                <li class="main-menu-item"><a href=""><span>Каталог</span></a>
                     <ul class="sub-menu">
                         <li class="sub-menu-item new-items"><a href="#">Новинки</a></li>
                         <li class="sub-menu-item"><a href="catalog.html">Сливочное</a></li>
@@ -27,19 +27,11 @@
                 <li class="main-menu-item"><a href="delivery-payment.html"><span>Доставка и оплата</span></a></li>
                 <li class="main-menu-item"><a href="about-us.html"><span>О Компании</span></a></li>
             </ul>
-            <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-                <p>
-                    <input class="visually-hidden" id="site-search" type="search" name="search" placeholder="Что ищем?">
-                    <label class="visually-hidden" for="site-search">Поиск по сайту</label>
-                </p>
-                <button class="header-button" type="button">Окно поиска</button>
-            </form>
-            <ul class="user-navigation">
-                <li class="user-login header-button">
-                    <a href="login.html">Вход</a>
-                </li>
+            <ul class="user-menu">
+                <li><a class="site-search" href="search.html">Поиск</a></li>
+                <li><a class="user-login" href="login.html">Вход</a></li>
+                <li><a class="cart empty" href="cart.html">Корзина</a></li>
             </ul>
-            <a class="cart-empty header-button" href="cart.html">Корзина</a>
         </nav>
         <p class="header-contacts">
             С 10 до 20, еежедневно<br>
@@ -176,6 +168,17 @@
             <br> Сделано в <a href="https://htmlacademy.ru" class="copyright-link">HTML Academy</a> © 2017
         </p>
     </footer>
+
+    <section class="modal-search">
+        <h2 class="visually-hidden">Поиск по сайту</h2>
+        <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+            <p>
+                <input class="visually-hidden" id="site-search" type="search" name="search" placeholder="Что ищем?">
+                <label class="visually-hidden" for="site-search">Поиск по сайту</label>
+            </p>
+        </form>
+    </section>
+
     <section class="modal modal-login">
         <h2 class="visually-hidden">Личный кабинет</h2>
         <form action="https://echo.htmlacademy.ru" class="form-login">
@@ -194,6 +197,7 @@
             <br> <a href="#">Новая регистрация</a>
         </p> 
     </section>
+
     <section class="modal modal-feedback">
         <h2 class="visually-hidden">Обратная связь</h2>
         <p><strong>Мы обязательно вам ответим!</strong></p>
