@@ -1,6 +1,8 @@
 body {
     margin: 0;
     padding: 0;
+    max-width: 1200px;
+    margin: 0 auto;
 
     font-family: "Roboto", Arial, sans-serif;
     font-size: 16px;
@@ -8,6 +10,9 @@ body {
     color: #ffffff;
 
     background-color: #849d8f;
+    background-image: url("../img/icecream-slider-1.png");
+    background-position: center top;
+    background-repeat: no-repeat;
 }
 
 a {
@@ -112,3 +117,96 @@ ul {
     border-bottom: 1px solid rgba(50, 50, 50, 0.2);
 }
 
+.header-contacts {
+    line-height: 16px;
+    font-size: 14px;;
+    font-weight: 700;
+    text-align: right;
+}
+
+.header-contacts span {
+    line-height: 24px;
+    font-size: 22px;
+}
+
+.slider p {
+    display: block;
+    margin: 0 auto;
+    width: 670px;
+
+    line-height: 60px;
+    font-size: 60px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.special-offer-item {
+    display: inline-block;
+    height: 229px;
+    padding: 18px;
+    width: 560px;
+
+    font-size: 18px;
+    font-weight: 700;
+    box-sizing: border-box;
+}
+
+.special-offer-item strong{
+    display: block;
+
+    line-height: 41px;
+    font-size: 35px;
+}
+
+.special-offer-1 {
+    background-color: #841839;
+    background-image: url("../img/background-1.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    border-radius: 15px;
+}
+
+.special-offer-2 {
+    background-color: #613825;
+    background-image: url("../img/background-2.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    border-radius: 15px;
+}
+
+.goods-catalog img {
+    border-radius: 50%;
+}
+
+.goods-item-price {
+    line-height: 45px;
+    font-size: 45px;
+    font-weight: 700;
+}
+
+.goods-item-price span {
+    font-size: 35px;
+}
+
+.goods-item a {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);ш
+}
+
+.advantages {
+    padding: 20px;
+
+    color: #323232;
+
+    background-color: #eee2ca;
+    background-image: url("../img/pattern.jpg");
+    border-radius: 15px;
+}
+
+.advantages .advantages-about-us {
+    line-height: 30px;
+    font-size: 24px;
+    font-weight: 700;
+}
