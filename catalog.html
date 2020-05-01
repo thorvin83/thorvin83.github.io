@@ -4,31 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Каталог Gllacy Shop</title>
 </head>
-<body>
+<body class="inner-page">
     <header class="main-header">
         <nav class="main-navigation">
-            <a href="index.html" class="main-header-logo">
+            <a class="main-header-logo" href="index.html">
                 <img src="img/main-logo.svg" width="154" height="64" alt="Логотип Gllacy Shop">
             </a>
             <ul class="main-menu">
-                <li><a class="current">Каталог</a>
-                    <ul class="catalog">
-                        <li class="catalog-item new-items"><a href="#">Новинки</a></li>
-                        <li class="catalog-item current-catalog-item"><a href="catalog.html">Сливочное</a></li>
-                        <li class="catalog-item"><a href="#">Щербеты</a></li>
-                        <li class="catalog-item"><a href="#">Фруктовый лёд</a></li>
-                        <li class="catalog-item"><a href="#">Мелорин</a></li>
+                <li class="main-menu-item"><a class="main-menu-current"><span>Каталог</span></a>
+                    <ul class="sub-menu">
+                        <li class="sub-menu-item new-items"><a href="#">Новинки</a></li>
+                        <li class="sub-menu-item"><a class="sub-menu-current" href="catalog.html">Сливочное</a></li>
+                        <li class="sub-menu-item"><a href="#">Щербеты</a></li>
+                        <li class="sub-menu-item"><a href="#">Фруктовый лёд</a></li>
+                        <li class="sub-menu-item"><a href="#">Мелорин</a></li>
                     </ul>
                 </li>
-                <li><a href="delivery-payment.html">Доставка и оплата</a></li>
-                <li><a href="about-us.html">О Компании</a></li>
+                <li class="main-menu-item"><a href="delivery-payment.html"><span>Доставка и оплата</span></a></li>
+                <li class="main-menu-item"><a href="about-us.html"><span>О Компании</span></a></li>
             </ul>
             <ul class="user-menu">
                 <li><a class="site-search" href="search.html">Поиск</a></li>
                 <li><a class="user-login" href="login.html">Вход</a></li>
-                <li><a class="cart empty" href="cart.html">Корзина</a></li>
+                <li><a class="cart full" href="cart.html">2 товара</a></li>
             </ul>
         </nav>
         <p class="header-contacts">
@@ -43,19 +44,23 @@
             <li><a href="catalog.html">Каталог</a></li>
             <li class="breadcrumbs-current">Сливочное</li>
         </ul>
-        <form action="https://echo.htmlacademy.ru" class="filter" method="GET">
+        <form class="filter" action="https://echo.htmlacademy.ru" method="GET">
             <p>
                 <label for="filter-sort">Сортировка:</label>
-                <select class="filter-field" name="sort" id="filter-sort">
-                    <option value="popular">по популярности</option>
-                    <option value="inexpensive">сначала недорогие</option>
-                    <option value="expensive">сначала дорогие</option>
-                    <option value="fat">по жирности</option>
-                </select>   
+                <div class="filter-field">
+                    <select name="sort" id="filter-sort">
+                        <option value="popular">по популярности</option>
+                        <option value="inexpensive">сначала недорогие</option>
+                        <option value="expensive">сначала дорогие</option>
+                        <option value="fat">по жирности</option>
+                    </select>  
+                </div>
             </p>
             <p>
                 <label for="filter-price">Цена: 100 руб. - 500 руб.</label>
-                <input class="filter-field" type="range" name="price" id="filter-price">
+                <div class="filter-field">
+                    <input type="range" name="price" id="filter-price">
+                </div>
             </p>
             <fieldset class="filter-field">
                 <legend>Жирность:</legend>
@@ -72,98 +77,98 @@
                 <label><input type="checkbox">сиропы</label>
                 <label><input type="checkbox">джемы</label>
             </fieldset>
-            <button class="filter-field filter-button" type="submit">Применить</button>
+            <button class="filter-button" type="submit">Применить</button>
         </form>
         <ul class="goods-catalog">
             <li class="goods-item">
                 <img src="img/icecream-1.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
                 <p class="goods-item-price">310 &#8381;<span> /кг</span></p>
-                <h3><a class="button visually-hidden" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
+                <a href="#"><h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3></a>
                 <a href="#" class="button">Быстрый просмотр</a>
             </li>
             <li class="goods-item">
                 <img src="img/icecream-2.jpg" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
                 <p class="goods-item-price">380 &#8381;<span> /кг</span></p>
-                <h3><a class="button visually-hidden" href="#">Сливочно-кофейное с кусочками шоколада</a></h3>
+                <a href="#"><h3>Сливочно-кофейное с кусочками шоколада</h3></a>
                 <a href="#" class="button">Быстрый просмотр</a>
             </li>
             <li class="goods-item">
                 <img src="img/icecream-3.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267">
                 <p class="goods-item-price">355 &#8381;<span> /кг</span></p>
-                <h3><a class="button visually-hidden" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
+                <a href="#"><h3>Сливочно-клубничное с присыпкой из белого шоколада</h3></a>
                 <a href="#" class="button">Быстрый просмотр</a>
             </li>
             <li class="goods-item">
                 <img src="img/icecream-4.jpg" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
                 <p class="goods-item-price">415 &#8381;<span> /кг</span></p>
-                <h3><a class="button visually-hidden" href="#">Сливочное крем-брюле с карамельной подливкой</a></h3>
+                <a href="#"><h3>Сливочное крем-брюле с карамельной подливкой</h3></a>
                 <a href="#" class="button">Быстрый просмотр</a>
             </li>
             <li class="goods-item">
                 <img src="img/icecream-5.jpg" alt="Сливочное с брусничным джемом" width="267" height="267">
                 <p class="goods-item-price">325 &#8381;<span> /кг</span></p>
-                <h3><a class="button visually-hidden" href="#">Сливочное с брусничным джемом</a></h3>
+                <a href="#"><h3>Сливочное с брусничным джемом</h3></a>
                 <a href="#" class="button">Быстрый просмотр</a>
             </li>
             <li class="goods-item">
                 <img src="img/icecream-6.jpg" alt="Сливочно-черничное с цельными ягодами черники" width="267" height="267">
                 <p class="goods-item-price">410 &#8381;<span> /кг</span></p>
-                <h3><a class="button visually-hidden" href="#">Сливочно-черничное с цельными ягодами черники</a></h3>
+                <a href="#"><h3>Сливочно-черничное с цельными ягодами черники</h3></a>
                 <a href="#" class="button">Быстрый просмотр</a>
             </li>
             <li class="goods-item">
                 <img src="img/icecream-7.jpg" alt="Сливочно-лимонное с карамельной присыпкой" width="267" height="267">
                 <p class="goods-item-price">375 &#8381;<span> /кг</span></p>
-                <h3><a class="button visually-hidden" href="#">Сливочно-лимонное с карамельной присыпкой</a></h3>
+                <a href="#"><h3>Сливочно-лимонное с карамельной присыпкой</h3></a>
                 <a href="#" class="button">Быстрый просмотр</a>
             </li>
             <li class="goods-item">
                 <img src="img/icecream-8.jpg" alt="Сливочное с шоколадной стружкой" width="267" height="267">
                 <p class="goods-item-price">320 &#8381;<span> /кг</span></p>
-                <h3><a class="button visually-hidden" href="#">Сливочное с шоколадной стружкой</a></h3>
+                <a href="#"><h3>Сливочное с шоколадной стружкой</h3></a>
                 <a href="#" class="button">Быстрый просмотр</a>
             </li>
             <li class="goods-item">
                 <img src="img/icecream-9.jpg" alt="Сливочно-ванильное с кусочками шоколада" width="267" height="267">
                 <p class="goods-item-price">440 &#8381;<span> /кг</span></p>
-                <h3><a class="button visually-hidden" href="#">Сливочно-ванильное с кусочками шоколада</a></h3>
+                <a href="#"><h3>Сливочно-ванильное с кусочками шоколада</h3></a>
                 <a href="#" class="button">Быстрый просмотр</a>
             </li>
             <li class="goods-item">
                 <img src="img/icecream-10.jpg" alt="Сливочное с ментоловым сиропом" width="267" height="267">
                 <p class="goods-item-price">435 &#8381;<span> /кг</span></p>
-                <h3><a class="button visually-hidden" href="#">Сливочное с ментоловым сиропом</a></h3>
+                <a href="#"><h3>Сливочное с ментоловым сиропом</h3></a>
                 <a href="#" class="button">Быстрый просмотр</a>
             </li>
             <li class="goods-item">
                 <img src="img/icecream-11.jpg" alt="Сливочное с кусочками черного шоколада" width="267" height="267">
                 <p class="goods-item-price">355 &#8381;<span> /кг</span></p>
-                <h3><a class="button visually-hidden" href="#">Сливочное с кусочками черного шоколада</a></h3>
+                <a href="#"><h3>Сливочное с кусочками черного шоколада</h3></a>
                 <a href="#" class="button">Быстрый просмотр</a>
             </li>
             <li class="goods-item">
                 <img src="img/icecream-12.jpg" alt="Сливочное с мятным сиропом" width="267" height="267">
                 <p class="goods-item-price">420 &#8381;<span> /кг</span></p>
-                <h3><a class="button visually-hidden" href="#">Сливочное с мятным сиропом</a></h3>
+                <a href="#"><h3>Сливочное с мятным сиропом</h3></a>
                 <a href="#" class="button">Быстрый просмотр</a>
             </li>
         </ul>
         <button class="pagination-button previous" type="button" disabled>Назад</button>
         <ul class="pagination-list">
-            <li class="pagination-item pagination-item-current"><a href="#">1</a></li>
+            <li class="pagination-item pagination-item-current"><a href="#" disabled>1</a></li>
             <li class="pagination-item"><a href="#">2</a></li>
             <li class="pagination-item"><a href="#">3</a></li>
             <li class="pagination-item"><a href="#">4</a></li>
             <li class="pagination-item"><a href="#">5</a></li>
         </ul>
-        <button class="pagination-button next" type="button" disabled>Вперёд</button>
+        <button class="pagination-button next" type="button">Вперёд</button>
     </main>
     <footer class="main-footer">
         <ul class="footer-social">
-            <li><a href="https://twitter.com/" class="social-button">Твитер</a></li>
-            <li><a href="https://www.instagram.com/" class="social-button">Инстаграм</a></li>
-            <li><a href="https://www.facebook.com/" class="social-button">Фейсбук</a></li>
-            <li><a href="https://vk.com/" class="social-button">Вконтакте</a></li>
+            <li><a  class="social-button" href="https://twitter.com/">Твитер</a></li>
+            <li><a  class="social-button" href="https://www.instagram.com/">Инстаграм</a></li>
+            <li><a class="social-button" href="https://www.facebook.com/" >Фейсбук</a></li>
+            <li><a class="social-button" href="https://vk.com/" >Вконтакте</a></li>
         </ul>
         <ul class="footer-info">
             <li><a href="#" class="info-link suppliers">Для поставщиков</a></li>
@@ -172,16 +177,16 @@
             <li><a href="#" class="info-link">Экологические стандарты</a></li>
         </ul>
         <p class="footer-copyright">
-            <img src="img/logo-htmlacademy-small.svg" width="108" height="39" alt="Логотип HTML Academy" class="copyright-logo">          
-            <br> Сделано в <a href="https://htmlacademy.ru" class="copyright-link">HTML Academy</a> © 2017
+            <img src="img/logo-htmlacademy-small.svg" width="108" height="39" alt="Логотип HTML Academy" class="copyright-logo"><br>         
+            Сделано в <a class="copyright-link" href="https://htmlacademy.ru">HTML Academy</a> © 2017
         </p>
     </footer>
 
-    <section class="modal-search">
+    <section class="modal modal-search">
         <h2 class="visually-hidden">Поиск по сайту</h2>
         <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
             <p>
-                <input class="visually-hidden" id="site-search" type="search" name="search" placeholder="Что ищем?">
+                <input class="visually-hidden" id="site-search" type="search" name="search" placeholder="Что ищем?" required>
                 <label class="visually-hidden" for="site-search">Поиск по сайту</label>
             </p>
         </form>
@@ -191,36 +196,37 @@
         <h2 class="visually-hidden">Личный кабинет</h2>
         <form action="https://echo.htmlacademy.ru" class="form-login">
             <p>
-                <input id="login-email" type="email" name="email" placeholder="Электронная почта">
+                <input id="login-email" type="email" name="email" placeholder="Электронная почта" required>
                 <label class="visually-hidden" for="login-email">Электронная почта</label>
             </p>
             <p>
-                <input id="login-password" type="password" name="password" placeholder="Пароль">
+                <input id="login-password" type="password" name="password" placeholder="Пароль" required>
                 <label class="visually-hidden" for="login-password">Пароль</label>
             </p>
             <button class="button" type="submit">Войти</button>
         </form>
         <p>
-            <a href="#">Забыли пароль?</a>
-            <br> <a href="#">Новая регистрация</a>
+            <a href="#">Забыли пароль?</a><br>
+            <a href="#">Новая регистрация</a>
         </p> 
     </section>
 
-    <section class="modal cart-order">
+    <section class="modal modal-cart-order">
+        <h2 class="visually-hidden">Корзина заказа</h2>
         <ul class="cart-list">
             <li>
                 <button class="delete-item" type="button">Удалить товар</button>
-                <img src="img/icecream-mini-1.png" width="33" height="33" alt="Пломбир с апельсиновым джемом">
+                <a href="#"><img src="img/icecream-mini-1.png" width="33" height="33" alt="Пломбир с апельсиновым джемом"></a>
                 <p>Пломбир с апельсиновым джемом</p>
-                <p>1,5 кг х <span>200 руб.</span></p>
-                <p>300 руб.</p>
+                <p>1,5 кг х <span class="item-price">200 руб.</span></p>
+                <p class="item-total-price">300 руб.</p>
             </li>
             <li>
                 <button class="delete-item" type="button">Удалить товар</button>
-                <img src="img/icecream-mini-2.png" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада">
+                <a href="#"><img src="img/icecream-mini-2.png" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада"></a>
                 <p>Клубничный пломбир с присыпкой из белого шоколада</p>
-                <p>1,5 кг х <span>300 руб.</span></p>
-                <p>450 руб.</p>
+                <p>1,5 кг х <span class="item-price">300 руб.</span></p>
+                <p class="item-total-price">450 руб.</p>
             </li>
         </ul>
         <p class="cart-total-price">Итого: 750 руб.</p>

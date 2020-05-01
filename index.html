@@ -30,7 +30,7 @@
             <ul class="user-menu">
                 <li><a class="site-search" href="search.html">Поиск</a></li>
                 <li><a class="user-login" href="login.html">Вход</a></li>
-                <li><a class="cart empty" href="cart.html">Корзина</a></li>
+                <li><a class="cart" href="cart.html">Корзина</a></li>
             </ul>
         </nav>
         <p class="header-contacts">
@@ -81,25 +81,25 @@
                 <li class="goods-item hit">
                     <img src="img/icecream-1.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
                     <p class="goods-item-price">310 &#8381;<span> /кг</span></p>
-                    <h3><a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
+                    <a href="#"><h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3></a>
                     <a href="#" class="button">Быстрый просмотр</a>
                 </li>
                 <li class="goods-item hit">
                     <img src="img/icecream-2.jpg" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
                     <p class="goods-item-price">380 &#8381;<span> /кг</span></p>
-                    <h3><a href="#">Сливочно-кофейное с кусочками шоколада</a></h3>
+                    <a href="#"><h3>Сливочно-кофейное с кусочками шоколада</h3></a>
                     <a href="#" class="button">Быстрый просмотр</a>
                 </li>
                 <li class="goods-item hit">
                     <img src="img/icecream-3.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267">
                     <p class="goods-item-price">355 &#8381;<span> /кг</span></p>
-                    <h3><a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
+                    <a href="#"><h3>Сливочно-клубничное с присыпкой из белого шоколада</h3></a>
                     <a href="#" class="button">Быстрый просмотр</a>
                 </li>
                 <li class="goods-item hit">
                     <img src="img/icecream-4.jpg" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
                     <p class="goods-item-price">415 &#8381;<span> /кг</span></p>
-                    <h3><a href="#">Сливочное крем-брюле с карамельной подливкой</a></h3>
+                    <a href="#"><h3>Сливочное крем-брюле с карамельной подливкой</h3></a>
                     <a href="#" class="button">Быстрый просмотр</a>
                 </li>
             </ul>
@@ -121,7 +121,7 @@
                 <h2 class="visually-hidden">Подписаться на нас</h2>
                 <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
                 <form action="https://echo.htmlacademy.ru" class="subscribe-form" method="POST">
-                    <input id="subscribe-email" type="email" name="email" placeholder="Электронная почта">
+                    <input id="subscribe-email" type="email" name="email" placeholder="Электронная почта" required>
                     <label for="subscribe-email" class="visually-hidden">Введите электронную почту, чтобы подписаться</label>
                     <button class="button" type="submit">Отправить</button>
                 </form>
@@ -150,10 +150,10 @@
     </main>
     <footer class="main-footer">
         <ul class="footer-social">
-            <li><a href="https://twitter.com/" class="social-button">Твитер</a></li>
-            <li><a href="https://www.instagram.com/" class="social-button">Инстаграм</a></li>
-            <li><a href="https://www.facebook.com/" class="social-button">Фейсбук</a></li>
-            <li><a href="https://vk.com/" class="social-button">Вконтакте</a></li>
+            <li><a  class="social-button" href="https://twitter.com/">Твитер</a></li>
+            <li><a  class="social-button" href="https://www.instagram.com/">Инстаграм</a></li>
+            <li><a class="social-button" href="https://www.facebook.com/" >Фейсбук</a></li>
+            <li><a class="social-button" href="https://vk.com/" >Вконтакте</a></li>
         </ul>
         <ul class="footer-info">
             <li><a href="#" class="info-link suppliers">Для поставщиков</a></li>
@@ -162,16 +162,16 @@
             <li><a href="#" class="info-link">Экологические стандарты</a></li>
         </ul>
         <p class="footer-copyright">
-            <img src="img/logo-htmlacademy-small.svg" width="108" height="39" alt="Логотип HTML Academy" class="copyright-logo">          
-            <br> Сделано в <a href="https://htmlacademy.ru" class="copyright-link">HTML Academy</a> © 2017
+            <img src="img/logo-htmlacademy-small.svg" width="108" height="39" alt="Логотип HTML Academy" class="copyright-logo"><br>         
+            Сделано в <a class="copyright-link" href="https://htmlacademy.ru">HTML Academy</a> © 2017
         </p>
     </footer>
 
-    <section class="modal-search">
+    <section class="modal modal-search">
         <h2 class="visually-hidden">Поиск по сайту</h2>
         <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
             <p>
-                <input class="visually-hidden" id="site-search" type="search" name="search" placeholder="Что ищем?">
+                <input class="visually-hidden" id="site-search" type="search" name="search" placeholder="Что ищем?" required>
                 <label class="visually-hidden" for="site-search">Поиск по сайту</label>
             </p>
         </form>
@@ -181,18 +181,18 @@
         <h2 class="visually-hidden">Личный кабинет</h2>
         <form action="https://echo.htmlacademy.ru" class="form-login">
             <p>
-                <input id="login-email" type="email" name="email" placeholder="Электронная почта">
+                <input id="login-email" type="email" name="email" placeholder="Электронная почта" required>
                 <label class="visually-hidden" for="login-email">Электронная почта</label>
             </p>
             <p>
-                <input id="login-password" type="password" name="password" placeholder="Пароль">
+                <input id="login-password" type="password" name="password" placeholder="Пароль" required>
                 <label class="visually-hidden" for="login-password">Пароль</label>
             </p>
             <button class="button" type="submit">Войти</button>
         </form>
         <p>
-            <a href="#">Забыли пароль?</a>
-            <br> <a href="#">Новая регистрация</a>
+            <a href="#">Забыли пароль?</a><br>
+            <a href="#">Новая регистрация</a>
         </p> 
     </section>
 
@@ -208,7 +208,7 @@
                 <input type="email" name="email" id="email-feedback" placeholder="Ваша почта для ответа?" required>
                 <label class="visually-hidden" for="email-feedback">Электронный адрес</label>
             </p>
-            <textarea name="feedback" id="feedback-text" cols="30" rows="10">Напишите что нибудь...</textarea>
+            <textarea name="feedback" id="feedback-text" cols="30" rows="10" placeholder="Напишите что нибудь..."></textarea>
             <button class="button" type="submit">Отправить</button>
         </form>
         <button class="modal-close" type="button">Закрыть</button>

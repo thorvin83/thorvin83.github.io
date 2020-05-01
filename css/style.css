@@ -15,6 +15,10 @@ body {
     background-repeat: no-repeat;
 }
 
+body.inner-page {
+    background-image: none;
+}
+
 a {
     text-decoration: none;
     cursor: pointer;
@@ -33,7 +37,7 @@ ul {
 
 .button {
     display: inline-block;
-    padding: 16px 24px;
+    padding: 12px 24px;
     
     color: #ffffff;
     line-height: 24px;
@@ -44,7 +48,7 @@ ul {
 
     background-color: #e74a35;
     background-image: linear-gradient( to top, #ca3824, #f26843);
-    box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 1);
+    box-shadow: 0px 2px 2px 0px #ac1000;
     border: none;
     border-radius: 32px;  
 }
@@ -52,13 +56,17 @@ ul {
 .button:hover,
 .button:focus {
 
-        background-image: linear-gradient( to top, rgba(245, 135, 105), rgba(235, 110, 95));
-        box-shadow: 0px 1px 2px 0px rgba(172, 16, 0, 1);
+        background-image: linear-gradient( to top, #f58769, #eb6e5f);
+        box-shadow: 0px 1px 2px 0px #ac1000;
 }
 
 .button:active {
-        background-image: linear-gradient( to top, rgb(242,104,67), rgb(231,74,53));
-        box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 1);       
+        background-image: linear-gradient( to top, #f26843, #e74a35);
+        box-shadow: inset 0px 2px 2px 0px #942718;       
+}
+
+.button-big {
+    
 }
 
 .main-menu span {
@@ -92,6 +100,12 @@ ul {
     background-color: #ffffff;
 }
 
+.user-menu .cart.full {
+    color: #323232;
+
+    background-color: #ffffff;
+}
+
 .main-menu-item > a:hover,
 .main-menu-item > a:focus {
     color: #333333;
@@ -99,8 +113,19 @@ ul {
     background-color: #ffffff;
 }
 
-.main-menu-item >a:active {
+.main-menu-item > a:active {
     box-shadow: inset 0px 2px 1px 0px #696969;   
+}
+
+.main-menu .main-menu-current,
+.sub-menu .sub-menu-current {
+    color: #ffffff;
+
+   background-color: #d07058; 
+}
+
+.main-menu-current span {
+    border: 0;
 }
 
 .sub-menu {
@@ -226,11 +251,11 @@ ul {
     border-radius: 10px;
 }
 
-.goods-item + a {
+.goods-item h3 {
     color: #ffffff;
     font-size: 16px;
     font-weight: 400;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);ш
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .advantages {
@@ -318,5 +343,171 @@ ul {
 .contacts b {
     line-height: 24px;
     font-size: 18px;
+}
+
+.breadcrumbs {
+    line-height: 16px;
+    font-size: 14px;
+}
+.breadcrumbs a {
+    color: #ffffff;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:focus,
+.breadcrumbs a:active {
+    color: #ffbc9e;
+    
+    border-bottom-color: rgba(255, 188, 158, 0.2);
+}
+
+fieldset {
+    border: none;
+}
+
+.filter-field {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.filter-button {
+    font: inherit;
+    color: #ffffff;
+
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid #ffffff;
+    border-radius: 20px;
+}
+
+.filter-button:hover,
+.filter-button:focus {
+    color: #323232;
+
+    background-color: #ffffff;
+}
+
+.filter-button:active {
+    color: #323232;
+
+    background-color: #ffffff;
+    box-shadow: inset 0px 2px 1px 0px  #696969;
+}
+
+select {
+    color: #ffffff;
+    background-color: transparent;
+}
+
+select:hover {
+    color: #323232;
+}
+
+select option {
+    color: #323232;
+}
+
+.pagination-list a {
+    color: #ffffff;
+}
+
+.pagination-item-current a{
+    color: #323232;
+    
+    background-color: #ffffff;
+}       
+
+.pagination-item a:hover,
+.pagination-item a:focus {
+    background-color: rgba(255, 255, 255, 0.2)
+}
+
+.pagination-item a:active {
+    color: #323232;
+    
+    background-color: #ffffff;
+}
+
+.main-footer a {
+    color: #ffffff;
+    font-size: 13px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.main-footer .suppliers {
+    font-weight: 700;
+}
+
+.main-footer a:hover,
+.main-footer a:focus,
+.main-footer a:active {
+    color: #ffbc9e;
+    
+    border-bottom-color: rgba(255, 188, 158, 0.2);
+}
+
+.footer-copyright {
+    line-height: 18px;
+    font-size: 12px;
+}
+
+.modal {
+    color: #323232;
+    line-height: 24px;
+    font-size: 13px;
+
+    background-color: #f8f7f4;
+}
+
+.modal-login a {
+    color: inherit;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3)
+}
+
+.modal-feedback strong {
+    line-height: 28px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.modal-cart-order {
+    line-height: 16px;
+}
+
+.cart-list .item-price {
+    color: #999999;
+}
+
+.modal-cart-order .cart-total-price {
+    line-height: 18px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+input,
+textarea {
+    font: inherit;
+    color: #323232;
+    font-size: 16px;
+
+    outline: none;
+    border: 1px solid #d3d3d2;
+    border-radius: 5px;
+}
+
+input:hover,
+textarea:hover {
+    border: 2px solid #c7c6c5;
+}
+
+input:focus,
+textarea:focus {
+    border: 2px solid #8fbdec;
+}
+
+input:not(:invalid),
+textarea:not(:invalid) {
+    font-weight: 700;
 }
 
