@@ -1,8 +1,31 @@
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+.content-box-component: {
+    box-sizing: content-box;
+}
+
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+}
+
 body {
     margin: 0;
     padding: 0;
-    max-width: 1200px;
-    margin: 0 auto;
 
     font-family: "Roboto", Arial, sans-serif;
     font-size: 16px;
@@ -11,8 +34,18 @@ body {
 
     background-color: #849d8f;
     background-image: url("../img/icecream-slider-1.png");
-    background-position: center top;
+    background-position: top center;
     background-repeat: no-repeat;
+}
+
+.wrapper {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 2.3%;
 }
 
 body.inner-page {
@@ -66,7 +99,40 @@ ul {
 }
 
 .button-big {
-    
+    line-height: 32px;
+    font-size: 32px;
+    text-shadow: 0 2px 5px #a0200b;
+}
+
+.button-big:hover,
+.button-big:focus {
+    box-shadow: 0px 2px 2px 0px #ac1000;
+}
+
+.main-navigation {
+    display: flex;
+    align-items: center;
+    margin-top: 9px;
+}
+
+.main-header-logo {
+    width: 154px;
+    height: 64px;
+}
+
+.main-menu {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 560px;
+}
+
+.user-menu {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 270px;
+    margin-left: auto;
 }
 
 .main-menu span {
@@ -76,7 +142,7 @@ ul {
 .main-menu-item > a,
 .user-menu a {
     display: inline-block;
-    padding: 10px 15px;
+    padding: 8px 15px;
 
     color:#ffffff;
     line-height: 18px;
@@ -174,16 +240,33 @@ ul {
     border-bottom: 1px solid rgba(50, 50, 50, 0.2);
 }
 
-.header-contacts {
+.main-contacts {
+    margin: 0;
+    padding: 0;
+
     line-height: 16px;
     font-size: 14px;;
     font-weight: 700;
     text-align: right;
 }
 
-.header-contacts span {
+.main-contacts span {
+    display: block;
+    margin-top: 4px;
+
     line-height: 24px;
     font-size: 22px;
+    letter-spacing: -0.3px;
+}
+
+.slider-list {
+    margin: 0;
+    padding: 0;
+}
+.slider {
+    margin: 0;
+    padding: 0;
+    min-height: 495px;
 }
 
 .slider p {
@@ -197,15 +280,23 @@ ul {
     text-align: center;
 }
 
+.special-offer {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    margin-top: 35px;;
+    padding: 0;
+}
+
 .special-offer-item {
-    display: inline-block;
-    height: 229px;
-    padding: 18px;
+    margin: 0;
+    padding: 0;
     width: 560px;
+    min-height: 229px;
+
 
     font-size: 18px;
     font-weight: 700;
-    box-sizing: border-box;
 }
 
 .special-offer-item strong{
@@ -217,9 +308,9 @@ ul {
 
 .special-offer-1 {
     background-color: #841839;
-    background-image: url("../img/background-1.jpg");
+    background-image: url("../img/background-1.jpg"); 
     background-repeat: no-repeat;
-    background-position: 0 0;
+    background-position: center;
     border-radius: 15px;
 }
 
@@ -227,7 +318,7 @@ ul {
     background-color: #613825;
     background-image: url("../img/background-2.jpg");
     background-repeat: no-repeat;
-    background-position: 0 0;
+    background-position: center;
     border-radius: 15px;
 }
 
@@ -239,6 +330,7 @@ ul {
     line-height: 45px;
     font-size: 45px;
     font-weight: 700;
+    text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
 }
 
 .goods-item-price span {
@@ -433,6 +525,10 @@ select option {
     font-size: 13px;
 
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.main-footer .social-button {
+    border: 3px solid rgba(255,255,255,.5);
 }
 
 .main-footer .suppliers {
