@@ -49,7 +49,7 @@ body {
     padding: 0 2.3%;
 }
 
-body.inner-page {
+.inner-page {
     background-image: none;
 }
 
@@ -142,7 +142,7 @@ ul {
 
 .main-menu-item > a,
 .user-menu a {
-    display: inline-block;
+    display: block;
     padding: 8px 15px;
 
     color:#ffffff;
@@ -230,7 +230,6 @@ ul {
     background-color: #fbded7;
 }
 
-
 .sub-menu a:active {
     background-color: #f6b5a5;
 }
@@ -239,6 +238,19 @@ ul {
     font-weight: 700;
 
     border-bottom: 1px solid rgba(50, 50, 50, 0.2);
+}
+
+.breadcrumbs {
+    display: flex;
+    align-items: flex-end;
+    padding: 0;
+    margin: 0;
+
+    font-weight: 400;
+}
+
+.breadcrumbs li {
+    display: inline;
 }
 
 .main-contacts {
@@ -258,6 +270,10 @@ ul {
     line-height: 24px;
     font-size: 22px;
     letter-spacing: -0.3px;
+}
+
+main h1 {
+    margin-top: 10px;;
 }
 
 .slider-list {
@@ -324,8 +340,6 @@ ul {
 }
 
 .goods-catalog {
-    display: flex;
-    justify-content: space-between;
     margin: 0;
     padding: 0;
     margin-top: 40px;;
@@ -336,12 +350,16 @@ ul {
 }
 
 .goods-item {
-position: relative;
+    position: relative;
 
     width: 267px;
     min-height: 328px;
 
     text-align: center;
+}
+
+.goods-item:not(:nth-child(-n+4)) {
+    margin-top: 34px;
 }
 
 .goods-item:hover {
@@ -526,6 +544,12 @@ position: relative;
 
 fieldset {
     border: none;
+}
+
+.filter {
+    display: flex;
+    margin-top: 10px;
+    min-height: 160px;
 }
 
 .filter-field {
