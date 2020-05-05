@@ -122,10 +122,16 @@ ul {
 }
 
 .main-menu {
-    display: flex;
     margin: 0;
     padding: 0;
+    margin-top: -2px;
+    margin-left: 8px;
     width: 560px;
+}
+
+.main-menu .main-menu-item {
+    display: inline-block;
+    margin-right: -4px;
 }
 
 .user-menu {
@@ -143,7 +149,7 @@ ul {
 .main-menu-item > a,
 .user-menu a {
     display: block;
-    padding: 8px 15px;
+    padding: 8px 14px;
 
     color:#ffffff;
     line-height: 18px;
@@ -195,32 +201,52 @@ ul {
     border: 0;
 }
 
+.main-menu > li {
+    position: relative;
+}
+
 .main-menu .sub-menu {
+    position: absolute;
+    left: -5px;
+    z-index: 1;
+
+    display: none;
     width: 143px;
     padding: 0;
-    margin-top: 5px;
+    margin: 0;
+    margin-top: -1px;
+    padding-top: 5px;
+    background-color: transparent;
 
-    background-color: #ffffff;
     border-radius: 4px;
     box-sizing: border-box;
     box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
 }
 
+
+.sub-menu-pointer:hover .sub-menu {
+    display: block;
+}
+
 .sub-menu a {
     display: block;
-    padding: 10px 20px;
+    padding: 8px 20px;
 
     font-size: 14px;
     line-height: 16px;
     color: #323232;
+    background-color: #f8f7f4;
 }
 
-.sub-menu-item:first-child a{
+.sub-menu-item:first-child a {
+    padding-top: 12px;
+    padding-bottom: 12px;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
 }
 
-.sub-menu-item:last-child a{
+.sub-menu-item:last-child a {
+    padding-bottom: 12px;
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
 }
@@ -235,7 +261,16 @@ ul {
 }
 
 .sub-menu .new-items {
-    font-weight: 700;
+    font-weight: 700; 
+}
+
+.sub-menu .new-items::after {
+    content: "";
+
+    display: block;
+    width: 125px;
+    margin-top: -1px;
+    margin-left: 10px;
 
     border-bottom: 1px solid rgba(50, 50, 50, 0.2);
 }
@@ -669,6 +704,8 @@ select option {
 }
 
 .modal {
+    padding: 20px;
+
     color: #323232;
     line-height: 24px;
     font-size: 13px;
@@ -703,6 +740,10 @@ select option {
 
 input,
 textarea {
+    padding-left: 15px;
+    width: 100%;
+    height: 44px;
+
     font: inherit;
     color: #323232;
     font-size: 16px;
@@ -710,6 +751,17 @@ textarea {
     outline: none;
     border: 1px solid #d3d3d2;
     border-radius: 5px;
+}
+
+textarea {
+    width: 428px;
+    height: 155px;
+    resize: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #999999;
 }
 
 input:hover,
@@ -723,7 +775,25 @@ textarea:focus {
 }
 
 input:not(:invalid),
-textarea:not(:invalid) {
+textarea:not(:placeholder-shown) {
     font-weight: 700;
 }
 
+.modal-search {
+    width: 341px;
+    min-height: 84px;
+}
+
+.modal-login {
+    width: 277px;
+    min-height: 214px;
+}
+
+.modal-login input {
+    width: 100%;
+}
+
+.modal-feedback {
+    width: 477px;
+    min-height: 442px;
+}
