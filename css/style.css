@@ -13,13 +13,18 @@ html {
 }
 
 
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active), input[type="checkbox"].visually-hidden, input[type="radio"].visually-hidden {
     position: absolute;
+
     width: 1px;
     height: 1px;
     margin: -1px;
     border: 0;
     padding: 0;
+
+    white-space: nowrap;
+
+    clip-path: inset(100%);
     clip: rect(0, 0, 0, 0);
     overflow: hidden;
 }
@@ -39,20 +44,6 @@ body {
     background-repeat: no-repeat;
 }
 
-.wrapper {
-    width: 1200px;
-    margin: 0 auto;
-}
-
-.container {
-    margin: 0 auto;
-    padding: 0 2.3%;
-}
-
-.inner-page {
-    background-image: none;
-}
-
 a {
     text-decoration: none;
     cursor: pointer;
@@ -69,9 +60,28 @@ ul {
     list-style: none;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.wrapper {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 2.3%;
+}
+
+.inner-page {
+    background-image: none;
+}
+
 .button {
     display: inline-block;
-    padding: 12px 24px;
+    padding: 10px 22px;
     
     color: #ffffff;
     line-height: 24px;
@@ -341,8 +351,10 @@ main h1 {
 }
 
 .special-offer-item {
+    position: relative;
+
     margin: 0;
-    padding: 0;
+    padding: 16px 18px;
     width: 560px;
     min-height: 229px;
 
@@ -353,9 +365,16 @@ main h1 {
 
 .special-offer-item strong{
     display: block;
+    margin-bottom: 16px;
 
     line-height: 41px;
     font-size: 35px;
+}
+
+.special-offer .button {
+    position: absolute;
+    bottom: 24px;
+    right: 20px;
 }
 
 .special-offer-1 {
@@ -378,6 +397,23 @@ main h1 {
     margin: 0;
     padding: 0;
     margin-top: 40px;;
+}
+
+.goods-catalog .hit {
+    position: relative;
+}
+
+.goods-catalog .hit::before {
+    content: "";
+
+    position: absolute;
+
+    width: 61px;
+    height: 61px;
+    
+    background-image: url("../img/hit.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
 }
 
 .goods-catalog img {
@@ -423,16 +459,27 @@ main h1 {
     margin: 0;
     padding: 0;
 
-
-    line-height: 45px;
-    font-size: 45px;
+    font-size: 30px;
     font-weight: 700;
-    white-space: pre;
     text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
 }
 
-.goods-item-price span {
-    font-size: 30px;
+.goods-item-price span.price {
+    padding-right: 35px;
+
+    line-height: 45px;
+    font-size: 45px;
+}
+
+.goods-item-price span.price::after {
+    content: url("../img/Р.svg");
+
+    position: absolute;
+    bottom: 6px;
+    left: 80px;
+
+    width: 31px;
+    height: 36px;
 }
 
 .flex-container {
@@ -463,9 +510,44 @@ main h1 {
 }
 
 .advantages .advantages-about-us {
+    margin: 0;
+    margin-top: 1px;
+
     line-height: 30px;
     font-size: 24px;
     font-weight: 500;
+}
+
+.advantages .advantages-item {
+    position: relative;
+
+    margin-top: 22px;
+    padding-left: 55px;
+}
+
+.advantages .advantages-item::before {
+    position: absolute;
+    left: 0;
+    top: -13px;
+
+    width: 49px;
+    height: 49px;
+}
+
+.advantages .advantages-1::before {
+    content: url("../img/icon-icecream.svg");
+}
+
+.advantages .advantages-2::before {
+    content: url("../img/icon-cow.svg");
+}
+
+.advantages .advantages-3::before {
+    content: url("../img/icon-leaf.svg");
+}
+
+.advantages .advantages-4::before {
+    content: url("../img/icon-degrees.svg");
 }
 
 .blog-subscribe {
@@ -475,6 +557,8 @@ main h1 {
 
 .last-blog-topic {
     width: 560px;
+
+    padding-left: 20px;
     
     background-image: url("../img/background-3.jpg");
     background-position: 0 0;
@@ -483,8 +567,7 @@ main h1 {
 }
 
 .last-blog-topic h2 {
-    padding-left: 22px;
-    padding-top: 28px;
+    margin-top: 22px;
 
     color: #323232;
     line-height: 22px;
@@ -493,8 +576,9 @@ main h1 {
 }
 
 .last-blog-topic h3 {
-    margin-left: 22px;
     width: 280px;
+
+    margin-top: 4px;
 }
 
 .last-blog-topic a {
