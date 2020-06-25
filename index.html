@@ -94,9 +94,9 @@
                         </li>
                     </ul>
                     <ul class="slider-checkbox">
-                        <li><button class="checkbox-button checkbox-current" type="button"><span class="visually-hidden">Первый слайд</span></button></li>
-                        <li><button class="checkbox-button " type="button"><span class="visually-hidden">Второй слайд</span></button></li>
-                        <li><button class="checkbox-button " type="button"><span class="visually-hidden">Третий слайд</span></button></li>
+                        <li><button class="checkbox-button checkbox-current" type="button" tabindex="0"><span class="visually-hidden">Первый слайд</span></button></li>
+                        <li><button class="checkbox-button" type="button" tabindex="0"><span class="visually-hidden">Второй слайд</span></button></li>
+                        <li><button class="checkbox-button" type="button" tabindex="0"><span class="visually-hidden">Третий слайд</span></button></li>
                     </ul>
                 </section>
                 <section class="special-offer">
@@ -118,7 +118,7 @@
                         <li class="goods-item hit">
                             <img src="img/icecream-1.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
                             <p class="goods-item-price"><span class="price">310</span>/кг</p>
-                            <a href="#"><h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3></a>
+                            <a class="goods-iterm-name" href="#"><h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3></a>
                             <a href="#" class="button">Быстрый просмотр</a>
                         </li>
                         <li class="goods-item hit">
@@ -254,7 +254,7 @@
                 </ul>
             </div>
             <p class="footer-copyright">
-                <img src="img/logo-htmlacademy-small.svg" width="108" height="39" alt="Логотип HTML Academy" class="copyright-logo"><br>         
+                <a class="copyright-logo" href="https://htmlacademy.ru"><img src="img/logo-htmlacademy-small.svg" width="108" height="39" alt="Логотип HTML Academy"></a><br>         
                 Сделано в <a class="copyright-link" href="https://htmlacademy.ru">HTML Academy</a> © 2017
             </p>
         </footer>
@@ -310,5 +310,8 @@
         </section>
         <div class="overlay"></div>
     </div>
+
+    <script src="js/script.js"></script>
+    
 </body>       
 </html>
