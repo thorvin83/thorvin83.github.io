@@ -8,6 +8,7 @@ var feedbackPopup = document.querySelector(".modal-feedback");
 var overlay = document.querySelector(".overlay");
 var modalClose = feedbackPopup.querySelector(".modal-close");
 var sliderButtons = document.querySelectorAll(".checkbox-button");
+var body = document.body;
 
 feedbackLink.addEventListener("click", function (evt) {
     evt.preventDefault();
@@ -31,7 +32,7 @@ window.addEventListener("keydown", function (evt) {
 
 var addSliderEventHandler = function (bgImage, sliderButton) {
     sliderButton.addEventListener('click', function () {
-        document.body.style.backgroundImage = 'url(bgImage)';
+        body.style.backgroundImage = 'url(bgImage)';
     });
 };
 
